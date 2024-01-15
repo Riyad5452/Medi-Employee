@@ -517,38 +517,6 @@ $(document).ready(function(){
       google.charts.load("current", {
         packages: ["corechart", "bar", "table"],
       });
-
-      fetch(
-        "https://script.google.com/macros/s/AKfycbxxGQenScebVio14XMthStJtwttqCgVg6wkaHjgW3plSinY8Z45HqgXwhSm46ZYP3U/exec?sheetName=Count",
-        {
-          redirect: "follow",
-        }
-      )
-        .then((response) => response.text())
-        .then((result) => {
-          sheetData = JSON.parse(result);
-          drawChart(sheetData);
-        })
-        .catch((error) => console.log("error", error));
-
-      function drawChart(chartData) {
-        var data = google.visualization.arrayToDataTable(chartData);
-
-        var options = {
-          chart: {
-            title: "MediCeram Complain Dashboard",
-            subtitle: "All Department Database",
-          },
-          bars: "vertical",
-        };
-
-        var chart = new google.charts.Bar(
-          document.getElementById("barchart_material")
-        );
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-
       fetch(
         "https://script.google.com/macros/s/AKfycbxxGQenScebVio14XMthStJtwttqCgVg6wkaHjgW3plSinY8Z45HqgXwhSm46ZYP3U/exec?sheetName=Count",
         {
