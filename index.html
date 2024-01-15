@@ -293,8 +293,8 @@ $(document).ready(function(){
 	     .attr("id", 'TextBoxDiv' + counter);
                 
 	newTextBoxDiv.after().html(' <div class="input-group mb-3"><span class="input-group-text" >Complain #'+ counter + ' : </span>' +
-	      '<input type="text" name="textbox' + counter + 
-	      '" id="textbox' + counter + '" value=""class="form-control Amount1" autocomplete="off" placeholder="Enter Your Complain" required ></div>');
+	      '<textarea rows='4' cols='50' name="textbox' + counter + 
+	      '" id="textbox' + counter + '" value=""class="form-control Amount1" autocomplete="off" placeholder="Enter Your Complain" required ></textarea></div>');
             
 	newTextBoxDiv.appendTo("#TextBoxesGroup");
 
@@ -374,7 +374,7 @@ $(document).ready(function(){
 	 <div id="TextBoxDiv1">	
                      <div class="input-group mb-3">
 	      <span class="input-group-text" >Complain #1 :</span>
-                            <textarea rows="4" cols="50" maxlength="50" id="textbox1" name="textbox1" class="form-control" autocomplete="off" " placeholder="Enter Your Complain" required>
+                            <textarea rows="4" cols="50" maxlength="150" id="textbox1" name="textbox1" class="form-control" autocomplete="off" " placeholder="Enter Your Complain" required>
 </textarea>
 <!-- <input type="text" id="textbox1" name="textbox1" class="form-control" autocomplete="off" " placeholder="Enter Your Complain" required> -->
 	  </div>
