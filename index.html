@@ -2,42 +2,31 @@
 <html>
 <head>
   <title>400 Error Form</title>
+   <style>
+  
+   table{
+     font-size:.875rem;
+   }
+
+body{
+        font-size: 1.05rem;
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-variant-numeric: slashed-zero;
+        min-height:10vh; 
+        display: grid;
+        place-items: top;
+        top: 50%;
+       
+        background-color: white;     
+        background-image:url(https://img.freepik.com/free-vector/seamless-pattern-tile_1159-5367.jpg?size=338&ext=jpg);
+         /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+        //background: url("https://i.ibb.co/Y7c5ZGX/13-logo-profile-picture-size-01-01.jpg") no-repeat center center fixed;
+         
+      }
+     </style>
 </head>
 <body>
   <h1>400 Error Form</h1>
-  <form id="myForm">
-    <label for="inputData">Input Data:</label>
-    <input type="text" id="inputData" name="inputData" required>
-    <br>
-    <input type="submit" value="Submit">
-  </form>
-
-  <script>
-    document.getElementById('myForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      sendData();
-    });
-
-    function sendData() {
-      var formData = new FormData(document.getElementById('myForm'));
-
-      fetch('https://script.google.com/macros/s/AKfycbzEXAMPLE/exec', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Bad Request: Invalid input data');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Success:', data);
-      })
-      .catch(error => {
-        console.error('Error:', error.message);
-      });
-    }
-  </script>
 </body>
 </html>
